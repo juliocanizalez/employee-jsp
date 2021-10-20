@@ -10,8 +10,8 @@
   if (request.getParameter("departmentNumber") != null && request.getParameter("departmentNumber") != null && request.getParameter("location") != null) {
     Department dep = new Department();
     dep.setDepartmentNumber(Integer.parseInt(request.getParameter("departmentNumber")));
-    dep.setDepartmentName(request.getParameter("departmentName").toString());
-    dep.setLocation(request.getParameter("location").toString());
+    dep.setDepartmentName(request.getParameter("departmentName"));
+    dep.setLocation(request.getParameter("location"));
     DAO.saveDepartment(dep);
   }
 %>
