@@ -59,10 +59,13 @@
           <select class="form-select" id="department"
                   onchange="fetchDepartment()">
             <option selected disabled>Selecciona una opción</option>
-            <option value="10">Contabilidad</option>
-            <option value="20">Investigaci&oacute;n</option>
-            <option value="30">Ventas</option>
-            <option value="40">Producci&oacute;n</option>
+            <%
+              List<Department> departments = DAO.getDepartmentList();
+              request.setAttribute("departments", departments);
+            %>
+            <c:forEach items="${departments}" var="dep">
+              <option value="${dep.departmentNumber}">${dep.departmentName}</option>
+            </c:forEach>
           </select>
         </div>
 
