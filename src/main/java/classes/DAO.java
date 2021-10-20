@@ -82,7 +82,6 @@ public class DAO {
         e.setEmployeeNumber(oResult.getInt("emp_no"));
         e.setLastName(oResult.getString("apellido"));
         e.setPosition(oResult.getString("oficio"));
-        e.setDepartment(oResult.getString("dnombre"));
 
         employeesList.add(e);
       }
