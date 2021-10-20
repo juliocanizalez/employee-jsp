@@ -11,6 +11,12 @@
     </properties>
     <root id="archive" name="jsp-employees-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="jsp-employees:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="mysql.connector.java" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
